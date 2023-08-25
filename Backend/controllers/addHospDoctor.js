@@ -63,7 +63,7 @@ const addDoctorProfile = async function (req, res) {
         });
 
         if (duplicatePhone > 0) {
-            return res.status(400).send({ status: false, msg: 'This phone no. is used before for sign up, use different phone no.' });
+            return res.status(409).send({ status: false, msg: 'This phone no. is used before for sign up, use different phone no.' });
         }
 
         // For a Valid Email...
@@ -84,7 +84,7 @@ const addDoctorProfile = async function (req, res) {
         });
 
         if (duplicateEmail > 0) {
-            return res.status(400).send({ status: false, msg: 'This email is used before for sign up, use different email' });
+            return res.status(409).send({ status: false, msg: 'This email is used before for sign up, use different email' });
         }
 
         const salt = await bcrypt.genSalt(10);
