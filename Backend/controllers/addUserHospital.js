@@ -6,11 +6,6 @@ const { v4: uuidv4 } = require("uuid");
 const dbConnection = require("../utils/mysql")
 const validator = require("../middleware/validation")
 
-// AWS.config.update({ 
-//     accessKeyId: "AKIAYYFIKK6MVZQOGZ5K",
-//     secretAccessKey: "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",
-//     region: "us-east-1" }); 
-// const sns = new AWS.SNS();
 
 // // Function to generate a random OTP
 // const generateOTP = () => {
