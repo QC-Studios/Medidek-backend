@@ -7,7 +7,7 @@ const app = express()
 // Use body-parser middleware for parsing JSON and url-encoded request bodies
 app.use(cors({
     credentials:true,
-    origin:'https://medidek-backend.onrender.com'
+    origin:'https://www.medidek.in'
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
